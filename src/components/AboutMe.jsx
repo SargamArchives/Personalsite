@@ -1,13 +1,13 @@
 import React from "react";
 import useTyping from "../hooks/useTyping";
-import gh from "../assets/gh.svg";
 
 function AboutMe() {
   let aboutText = useTyping("I am a developer, designer & student.");
   let interestText = useTyping("I love playing with javascript and python.");
 
   return (
-    <div className="mockup-code mx-auto">
+    <div className="mockup-code mx-auto container">
+      <h1 className="text-center text-xl font-bold">My Brief Intro</h1>
       <div className="py-2">
         <pre data-prefix="~>" className="text-success">
           <code>whois</code>

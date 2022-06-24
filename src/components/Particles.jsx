@@ -1,14 +1,37 @@
+// import Particles from "react-tsparticles";
+// import { loadFull } from "react-tsparticles";
+import particleConfig from "../particle.config.js";
+
+// const ParticlesBackground = () => {
+//   const particlesInit = async (main) => {
+//     console.log(main);
+//     await loadFull(tsParticles);
+//   };
+
+//   const particlesLoaded = (container) => {
+//     console.log(container);
+//   };
+
+//   return (
+//     <Particles
+//       id="tsparticles"
+//       options={particleConfig}
+//       init={particlesInit}
+//       loaded={particlesLoaded}
+//     />
+//   );
+// };
+
+// export default ParticlesBackground;
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
-const App = () => {
+const ParticleBackground = () => {
   const particlesInit = async (main) => {
+    console.log("checking ");
     console.log(main);
 
-    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
-    await loadFull(tsParticles);
+    await loadFull(main);
   };
 
   const particlesLoaded = (container) => {
@@ -18,9 +41,10 @@ const App = () => {
   return (
     <Particles
       id="tsparticles"
-      url="http://foo.bar/particles.json"
+      options={particleConfig}
       init={particlesInit}
       loaded={particlesLoaded}
     />
   );
 };
+export default ParticleBackground;
