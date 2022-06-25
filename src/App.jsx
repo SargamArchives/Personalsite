@@ -8,8 +8,8 @@ import Techs from "./components/Techs";
 function App() {
   return (
     <div className="mx-auto">
-      <Nav />
       <ParticleBackground />
+      <Nav />
       <Hero />
       <div className="divider"></div>
       <AboutMe />

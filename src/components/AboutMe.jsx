@@ -26,7 +26,7 @@ function AboutMe() {
   let aboutText = useTyping("I am a developer, designer & student.");
 
   return (
-    <div className="mockup-code mx-auto container">
+    <div id="intro" className="mockup-code mx-auto container">
       <h1 className="text-center text-xl font-bold">My Brief Intro</h1>
       <div className="py-2">
         <pre data-prefix="~>" className="text-success">

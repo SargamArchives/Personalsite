@@ -21,7 +21,10 @@ const Rating = ({ number }) => {
 function Techs() {
   return (
     <div>
-      <h1 className="text-2xl lg:text-4xl mb-5 lg:mb-10 text-center">
+      <h1
+        id="languages"
+        className="text-2xl lg:text-4xl mb-5 lg:mb-10 text-center"
+      >
         Languages I'm familar with
       </h1>
       <div class="overflow-x-auto max-w-[1000px] mx-auto">

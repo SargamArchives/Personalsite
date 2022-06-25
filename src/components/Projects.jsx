@@ -44,7 +44,7 @@ const Project = ({ projectName, projectDesc, projectUrl }) => {
 
 function Projects() {
   return (
-    <div className="text-center">
+    <div id="projects" className="text-center">
       <h1 className="text-2xl lg:text-4xl mb-5 lg:mb-10">
         Projects that I've worked on
       </h1>
