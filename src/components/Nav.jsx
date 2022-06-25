@@ -3,7 +3,7 @@ import dp from "../assets/dp.jpg";
 
 const Nav = () => {
   return (
-    <nav className="container  mx-auto">
+    <nav className="container mx-auto">
       <div className="navbar bg-base-100">
         <div className="flex-1">
           <a className="btn btn-ghost normal-case text-xl">Sargam Poudel</a>
