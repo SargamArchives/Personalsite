@@ -2,7 +2,8 @@ import AboutMe from "./components/AboutMe";
 import Hero from "./components/Hero";
 import Nav from "./components/Nav";
 import ParticleBackground from "./components/Particles";
-// import Projects from "./components/Projects";
+import Projects from "./components/Projects";
+import Techs from "./components/Techs";
 
 function App() {
   return (
@@ -13,7 +14,10 @@ function App() {
       <div className="divider"></div>
       <AboutMe />
       <div className="divider"></div>
-      {/* <Projects /> */}
+      <Techs />
+      <div className="divider"></div>
+      <Projects />
+      <div className="divider"></div>
     </div>
   );
 }
