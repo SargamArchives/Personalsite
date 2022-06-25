@@ -2,7 +2,7 @@ import AboutMe from "./components/AboutMe";
 import Hero from "./components/Hero";
 import Nav from "./components/Nav";
 import ParticleBackground from "./components/Particles";
-import Projects from "./components/Projects";
+// import Projects from "./components/Projects";
 
 function App() {
   return (
