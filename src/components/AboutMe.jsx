@@ -1,9 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import useTyping from "../hooks/useTyping";
 
+const responses = [
+  { key: "help", trigger: "birthday, study, favseries, favmovie," },
+  { key: "help", trigger: "whichos" },
+  { key: "birthday", trigger: "March 5" },
+  { key: "study", trigger: "Trinity International College" },
+  { key: "favseries", trigger: "Breaking Bad" },
+  { key: "favmovie", trigger: "Interstellar" },
+  { key: "whichos", trigger: "manjaro" },
+];
+
 function AboutMe() {
+  const [moreInfo, setMoreInfo] = useState([]);
+  const [input, setInput] = useState("");
+
+  useEffect(() => {
+    responses.forEach((res) => {
+      if (input.toLowerCase() === res.key) {
+        setMoreInfo((oldInfo) => [...oldInfo, res]);
+        setInput("");
+      }
+    });
+  }, [input]);
   let aboutText = useTyping("I am a developer, designer & student.");
-  let interestText = useTyping("I love playing with javascript and python.");
 
   return (
     <div className="mockup-code mx-auto container">
@@ -71,6 +91,34 @@ function AboutMe() {
           </code>
         </pre>
       </div>
+      {moreInfo.length > 0 &&
+        moreInfo.map((info, id) => (
+          <li key={id} className="py-2">
+            <pre data-prefix="~>" className="text-success">
+              <code>{info.key}</code>
+            </pre>
+            <pre data-prefix="~">
+              <code>{info.trigger}</code>
+            </pre>
+          </li>
+        ))}
+      <div className="py-2">
+        <pre data-prefix="~>" className="text-warning">
+          <code>Type help to know more.</code>
+        </pre>
+      </div>
+
+      <pre data-prefix="~>" className="text-success">
+        <code>
+          <input
+            className="input input-ghost w-full max-w-xs"
+            type="text"
+            onChange={(e) => setInput(e.target.value)}
+            value={input}
+            placeholder="Type here"
+          />
+        </code>
+      </pre>
     </div>
   );
 }
