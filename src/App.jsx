@@ -9,9 +9,9 @@ function App() {
       <Nav />
       <ParticleBackground />
       <Hero />
-      <div class="divider"></div>
+      <div className="divider"></div>
       <AboutMe />
-      <div class="divider"></div>
+      <div className="divider"></div>
     </div>
   );
 }

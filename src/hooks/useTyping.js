@@ -9,7 +9,6 @@ const useTyping = (phrase) => {
       if (index < phrase.length) {
         setText(() => text + phrase[index]);
         setIndex(() => index + 1);
-        console.log(index);
       }
     }, 100);
     return () => clearInterval(interval);
